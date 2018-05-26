@@ -29,7 +29,7 @@ Click on `New Item`
 Enter `deploy-app` as the job name and select `Freestyle project`. Click `OK` button.
 
 Under `General` -> `This project is parameterized`:
-- `Add Parameter` -> pull down `String Parameter`, enter `Name` as `appserver` and `Default Value` as YOUR-IP-ADDRESS (example `54.186.127.91`).
+- `Add Parameter` -> pull down `String Parameter`, enter `Name` as `appserver` and `Default Value` as `54.186.127.91`.
 - `Add Parameter` -> pull down `String Parameter`, enter `Name` as `portnum`.
 
 Under `Build` (second rightmost tab) -> `Execute shell` -> `Command`, enter following commandline with correct image name:
@@ -39,4 +39,4 @@ sudo -u devops ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $
 
 Click `Save`.
 
-And now to test it, from the Dashboard, click `deploy-app`, on the left sidebar, go to `Build with Parameters`, then specify a portnum (ex. `9090`), and click the `Build` button and a build should be started in your Build History. You can also check testing it in the browser at `http://YOUR-IP-ADDRESS:PORTNUM/`
+And now to test it, from the Dashboard, click `deploy-app`, on the left sidebar, go to `Build with Parameters`, then specify a portnum (ex. a portnum between `9000-9050`), and click the `Build` button and a build should be started in your Build History. You can also check testing it in the browser at `http://54.186.127.91:PORTNUM/`
