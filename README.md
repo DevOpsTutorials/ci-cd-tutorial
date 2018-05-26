@@ -19,3 +19,7 @@ sudo docker push thomastk/catnip
 ```
 
 Click `Save`.
+
+This job will ensure that everytime a change is checked in the Docker image is rebuilt and pushed that to Docker Hub.
+
+
